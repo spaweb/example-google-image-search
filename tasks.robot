@@ -15,6 +15,7 @@ ${SEARCH_TERM}    cute cat picture
 Accept Google Consent
     Select Frame    //iframe[contains(@src, "https://consent.google.com")]
     Click Element    id:introAgreeButton
+    [Teardown]    Unselect frame
 
 *** Keywords ***
 Open Google search page
@@ -26,7 +27,7 @@ Search for
     [Arguments]    ${text}
     Input Text    name:q    ${text}
     Press Keys    name:q    ENTER
-    Wait Until Page Contains    results
+    Wait Until Page Contains Element    search
 
 *** Keywords ***
 View image search results
