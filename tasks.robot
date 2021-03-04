@@ -5,7 +5,7 @@
 
 *** Settings ***
 Documentation     Executes Google image search and stores the first result image.
-Library           RPA.Browser
+Library           RPA.Browser.Selenium
 
 *** Variables ***
 ${GOOGLE_URL}     https://google.com/?hl=en
